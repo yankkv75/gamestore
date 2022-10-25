@@ -62,7 +62,7 @@
 }
 
 .img-wrap-section {
-    max-width: 400px;
+    max-width: 450px;
 }
 
 .section-img {
@@ -109,10 +109,6 @@
 @media screen and (max-width: 480px) {
     .section-row {
         grid-template-areas: "col1 col1" "col2 col2";
-    }
-
-    .section-container {
-        height: 65vh;
     }
 
     .heading {

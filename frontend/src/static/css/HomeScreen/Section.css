@@ -1,0 +1,121 @@
+.section-container {
+    color: #ffffff;
+    background-color: #000000;
+}
+
+.section-wrapper {
+    display: grid;
+    z-index: 1;
+    height: 600px;
+    width: 100%;
+    max-width: 1080px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 24px;
+    justify-content: center;
+}
+
+.section-row {
+    display: grid;
+    grid-auto-columns: minmax(auto, 1fr);
+    align-items: center;
+    grid-template-areas: "col1 col2";
+}
+
+.column1 {
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col1;
+}
+.column2 {
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col2;
+}
+
+.text-wrapper {
+    max-width: 540px;
+    padding-top: 1rem;
+}
+
+.top-line {
+    color: #01bf71;
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: 700;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    margin-bottom: 16px;
+}
+
+.heading {
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.subtitle {
+    max-width: 4400px;
+    margin-bottom: 35px;
+}
+
+.img-wrap-section {
+    max-width: 400px;
+}
+
+.section-img {
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.btn-wrapper-section {
+    margin-top: 1rem;
+    display: block;
+    align-items: center;
+    background: none;
+    border: none;
+}
+
+.btn-link-section {
+    offset: -80;
+    border-radius: 50px;
+    background-color: #ffffff;
+    white-space: nowrap;
+    padding: 10px 22px;
+    color: #000000;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.btn-link-section:hover {
+    background-color: #01bf71;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 760px) {
+    .section-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 80vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .section-row {
+        grid-template-areas: "col1 col1" "col2 col2";
+    }
+
+    .section-container {
+        height: 65vh;
+    }
+
+    .heading {
+        font-size: 32px;
+    }
+}

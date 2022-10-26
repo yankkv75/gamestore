@@ -1,0 +1,46 @@
+.acc-container {
+    color: #000000;
+    background-color: #ffffff;
+}
+
+.heading-acc {
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: #000000;
+}
+
+.btn-link-acc {
+    offset: -80;
+    border-radius: 50px;
+    background-color: #000000;
+    white-space: nowrap;
+    padding: 10px 22px;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.btn-link-acc:hover {
+    background-color: #01bf71;
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 760px) {
+    .acc-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 85vh;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .heading-acc {
+        font-size: 32px;
+    }
+}

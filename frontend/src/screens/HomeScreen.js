@@ -4,6 +4,7 @@ import HeroSection from '../components/HomeScreen/HeroSection'
 import BlogSection from '../components/HomeScreen/BlogSection'
 import GameSection from '../components/HomeScreen/GameSection'
 import ServicesSection from '../components/HomeScreen/ServicesSection'
+import NewAccSection from '../components/HomeScreen/NewAccSection'
 
 function HomeScreen() {
     return (
@@ -12,6 +13,7 @@ function HomeScreen() {
             <BlogSection />
             <GameSection />
             <ServicesSection />
+            <NewAccSection />
         </>
     )
 }

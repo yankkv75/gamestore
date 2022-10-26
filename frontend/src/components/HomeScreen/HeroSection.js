@@ -9,7 +9,7 @@ function HeroSection() {
             <h1>Find your game</h1>
             <p>all gaming novelties in one place</p>
             <button className='hero-btn'>
-                <Link to='/sign-in' className='hero-btn-link'>Join Now<i class="fa-solid fa-arrow-right" /></Link>
+                <Link to='/sign-in' className='hero-btn-link'>Join Now<i className="fa-solid fa-arrow-right" /></Link>
             </button>
         </div>
     )

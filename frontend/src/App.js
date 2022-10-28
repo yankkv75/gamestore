@@ -7,13 +7,15 @@ import Footer from './components/Footer'
 
 import HomeScreen from './screens/HomeScreen'
 import BlogScreen from './screens/BlogScreen'
+import PostScreen from './screens/PostScreen'
 
 function App() {
     return (
         <Router>
             <Header />
             <Route path='/' component={HomeScreen} exact />
-            <Route path='/blog' component={BlogScreen} exact />
+            <Route path='/blog' component={BlogScreen} />
+            <Route path='/post/:id' component={PostScreen} />
             <Footer />
         </Router>
     );

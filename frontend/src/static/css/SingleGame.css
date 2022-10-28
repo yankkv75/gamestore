@@ -1,0 +1,116 @@
+.single-game-message {
+    padding: 1rem 1rem 1rem;
+}
+
+.single-game-container {
+    padding: 3rem;
+    display: flex;
+    flex-flow: nowrap;
+    justify-content: space-between;
+    max-width: 1120px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.single-g-img a {
+    color: #01bf71;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.single-g-img a:hover {
+    color: #000000;
+}
+
+.single-g-description {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.single-g-description h3 {
+    font-size: 36px;
+}
+
+.single-g-description p {
+    font-size: 18px;
+    padding: 1rem 0 0;
+}
+
+.single-g-purchase {
+    margin: auto;
+    text-align: center;
+}
+
+.single-g-purchase h2 {
+    font-size: 36px;
+    font-weight: 200;
+}
+
+.single-g-purchase span {
+    color: #01bf71;
+}
+
+.single-g-purchase p {
+    font-size: 18px;
+    font-weight: 200;
+}
+
+.buy-wrapper {
+    padding-top: 1rem;
+    display: block;
+    align-items: center;
+    background: none;
+    border: none;
+    margin: auto;
+}
+
+.buy-link {
+    offset: -80;
+    border-radius: 50px;
+    background-color: #000000;
+    white-space: nowrap;
+    padding: 10px 60px;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.buy-link:hover {
+    background-color: #01bf71;
+    transform: scale(1.1);
+}
+
+@media screen and (min-width: 769px) {
+    .single-g-img {
+        width: 35%;
+    }
+
+    .game-img {
+        max-width: 100%;
+    }
+
+    .single-g-description {
+        width: 35%;
+        margin: 0 1rem 0;
+    }
+
+    .single-g-purchase {
+        width: 30%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .single-game-container {
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+    }
+
+    .single-g-purchase {
+        padding-top: 1rem;
+    }
+}

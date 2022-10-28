@@ -14,7 +14,7 @@ function BlogSection() {
                             <h1 className='heading'>Latest News</h1>
                             <div className='subtitle'>Read last news</div>
                             <button className='btn-wrapper-section'>
-                                <Link to='/section' className='btn-link-section'>Read blog</Link>
+                                <Link to='/blog' className='btn-link-section'>Read blog</Link>
                             </button>
                         </div>
                     </div>

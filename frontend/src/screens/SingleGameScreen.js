@@ -1,20 +1,30 @@
+import axios from 'axios'
+import { useState, useEffect } from 'react'
+
 import { Link as LinkRouter } from 'react-router-dom'
-import games from '../games'
 import '../static/css/SingleGame.css'
 
 
 
 function SingleGameScreen({ match }) {
 
-    const game = games.find((p) => p._id === match.params.id)
+    const [game, setGame] = useState([])
+
+    useEffect(() => {
+        async function fetchGame() {
+            const { data } = await axios.get(`/api/game/${match.params.id}`)
+            setGame(data)
+        }
+        fetchGame()
+    }, [])
 
     return (
         <div className='single-game-message'>
 
             <div className='single-game-container'>
                 <div className='single-g-img'>
-                    <img className='game-img' src={game.image} />
-                    <a href={game.trailer} target='_blank'>Watch Trailer</a>
+                    <img className='game-img' src={game.image} alt={game.name} />
+                    <a href={game.trailer} target='_blank' rel="noreferrer">Watch Trailer</a>
                 </div>
                 <div className='single-g-description'>
                     <h3>{game.name}</h3>

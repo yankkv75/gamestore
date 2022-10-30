@@ -3,9 +3,7 @@ import { Link } from 'react-router-dom'
 import '../static/css/Blog.css'
 
 function BlogItem({ post }) {
-
     return (
-
         <div className='cards-item'>
             <Link to={`post/${post._id}`} className='cards-item-link'>
                 <figure className='cards-item-pic-wrap'>
@@ -23,8 +21,6 @@ function BlogItem({ post }) {
                 </div>
             </Link>
         </div>
-
-
     )
 }
 

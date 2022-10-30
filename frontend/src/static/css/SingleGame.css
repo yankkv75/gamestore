@@ -1,6 +1,3 @@
-.single-game-message {
-    padding: 1rem 1rem 1rem;
-}
 
 .single-game-container {
     padding: 3rem;
@@ -84,7 +81,7 @@
     transform: scale(1.1);
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 768px) {
     .single-g-img {
         width: 35%;
     }
@@ -104,6 +101,11 @@
 }
 
 @media screen and (max-width: 768px) {
+
+    .game-img {
+        max-width: 90%;
+    }
+
     .single-game-container {
         display: flex;
         flex-flow: column;
@@ -113,4 +115,8 @@
     .single-g-purchase {
         padding-top: 1rem;
     }
+}
+
+@media screen and (max-widht: 480px){
+
 }

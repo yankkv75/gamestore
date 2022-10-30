@@ -8,7 +8,7 @@ function GameItem({ game }) {
             <table className='game-table'>
                 <tr>
                     <td className='game-image'>
-                        <img src={game.image} style={{ width: '100px' }} />
+                        <img src={game.image} alt={game.name} style={{ width: '100px' }} />
                     </td>
                     <td className='game-name'>
                         {game.name}

@@ -1,4 +1,4 @@
-const games = [
+games = [
     {
         '_id': '1',
         'image': '/images/images/cyberpunk2077.webp',
@@ -6,8 +6,8 @@ const games = [
         'description': 'Cyberpunk 2077 is an open-world, action-adventure RPG set in the megalopolis of Night City, where you play as a cyberpunk mercenary wrapped-up in a do-or-die fight for survival. Explore the dark future, now upgraded with next-gen in mind and featuring free additional content!',
         'trailer': 'https://www.youtube.com/watch?v=8X2kIfS6fb8',
         'count_in_stock': 15,
-        'price':'25'
-        
+        'price': '25'
+
     },
 
     {
@@ -49,10 +49,4 @@ const games = [
         'count_in_stock': 15,
         'price': '10'
     },
-
-
-
 ]
-
-
-export default games

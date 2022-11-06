@@ -1,33 +1,37 @@
 import { useState, useEffect } from 'react'
-
+import { useDispatch, useSelector } from 'react-redux'
 import '../static/css/Post.css'
-import axios from 'axios'
+
+import { listPostDetails } from '../actions/postActions'
 
 
 function PostScreen({ match }) {
 
-    const [post, setPost] = useState([])
+    const dispatch = useDispatch()
+    const postDetails = useSelector(state => state.postDetails)
+    const { loading, error, post } = postDetails
 
     useEffect(() => {
-        async function fetchPost() {
-            const { data } = await axios.get(`/api/post/${match.params.id}`)
-            setPost(data)
-        }
-        fetchPost()
-    }, [])
+        dispatch(listPostDetails(match.params.id))
+    }, [dispatch, match])
 
     return (
         <div>
-            <div className='post-container'>
-                <div className='post-image'>
-                    <img className='post-img' src={post.image} alt={post.name} />
-                </div>
-                <div className='post-text'>
-                    <h3>{post.title}</h3>
-                    <p>{post.text}</p>
-                    <p className='post-time'>{post.time}</p>
-                </div>
-            </div>
+            {loading ? <h1>Loading</h1>
+                : error ? <h1>{error}</h1>
+                    : (
+                        <div className='post-container'>
+                            <div className='post-image'>
+                                <img className='post-img' src={post.image} alt={post.name} />
+                            </div>
+                            <div className='post-text'>
+                                <h3>{post.title}</h3>
+                                <p>{post.text}</p>
+                                <p className='post-time'>{post.time}</p>
+                            </div>
+                        </div>
+                    )
+            }
         </div>
     )
 }

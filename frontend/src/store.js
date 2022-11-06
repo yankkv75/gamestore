@@ -5,12 +5,16 @@ import {
     postDetailsReducer,
     postListReducer
 } from './reducers/postReducers'
-import { gameListReducer } from './reducers/gameReducers'
+import {
+    gameDetailsReducer,
+    gameListReducer
+} from './reducers/gameReducers'
 
 const reducer = combineReducers({
     postList: postListReducer,
     postDetails: postDetailsReducer,
     gameList: gameListReducer,
+    gameDetails: gameDetailsReducer,
 
 })
 

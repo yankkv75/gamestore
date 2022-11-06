@@ -1,30 +1,32 @@
-import axios from 'axios'
 import { useState, useEffect } from 'react'
-
+import { useDispatch, useSelector } from 'react-redux'
 import GameItem from '../components/GameItem'
 import '../static/css/Games.css'
 
+import { listGames } from '../actions/gameActions'
+
 function GamesScreen({ }) {
 
-    const [games, setGames] = useState([])
+    const dispatch = useDispatch()
+    const gameList = useSelector(state => state.gameList)
+    const { error, loading, games } = gameList
 
     useEffect(() => {
-        async function fetchGames() {
-            const { data } = await axios.get('api/games/')
-            setGames(data)
-        }
-        fetchGames()
-    }, [])
+        dispatch(listGames())
+    }, [dispatch])
 
     return (
         <div className='games-container'>
             <p className='games-top'>Our Games</p>
-
-            <div>
-                {games.map((game) => (
-                    <GameItem game={game} />
-                ))}
-            </div>
+            {loading ? <h1>Loading</h1>
+                : error ? <h1>{error}</h1>
+                    :
+                    <div>
+                        {games.map((game) => (
+                            <GameItem game={game} />
+                        ))}
+                    </div>
+            }
         </div>
     )
 }

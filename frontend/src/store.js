@@ -2,9 +2,11 @@ import { legacy_createStore as createStore, combineReducers, applyMiddleware } f
 import thunk from 'redux-thunk'
 import { composeWithDevTools } from 'redux-devtools-extension'
 import { postListReducer } from './reducers/postReducers'
+import { gameListReducer } from './reducers/gameReducers'
 
 const reducer = combineReducers({
     postList: postListReducer,
+    gameList: gameListReducer,
 })
 
 const initalState = {}

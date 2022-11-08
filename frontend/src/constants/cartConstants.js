@@ -1,0 +1,2 @@
+export const CART_ADD_GAME = 'CART_ADD_GAME'
+export const CART_REMOVE_GAME = 'CART_REMOVE_GAME'

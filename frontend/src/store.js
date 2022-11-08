@@ -9,12 +9,17 @@ import {
     gameDetailsReducer,
     gameListReducer
 } from './reducers/gameReducers'
+import {
+    cartReducer
+} from './reducers/cartReducers'
 
 const reducer = combineReducers({
     postList: postListReducer,
     postDetails: postDetailsReducer,
     gameList: gameListReducer,
     gameDetails: gameDetailsReducer,
+    cart: cartReducer,
+
 
 })
 

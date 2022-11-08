@@ -10,6 +10,7 @@ import BlogScreen from './screens/BlogScreen'
 import PostScreen from './screens/PostScreen'
 import GamesScreen from './screens/GamesScreen'
 import SingleGameScreen from './screens/SingleGameScreen'
+import CartScreen from './screens/CartScreen'
 
 function App() {
     return (
@@ -20,6 +21,7 @@ function App() {
             <Route path='/post/:id' component={PostScreen} />
             <Route path='/games' component={GamesScreen} />
             <Route path='/game/:id' component={SingleGameScreen} />
+            <Route path='/cart/:id' component={CartScreen} />
             <Footer />
         </Router>
     );

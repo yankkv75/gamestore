@@ -20,7 +20,7 @@ function BlogSection() {
                     </div>
                     <div className='column2'>
                         <div className='img-wrap-section'>
-                            <img src='images/blog.jpg' className='section-img' alt='section' />
+                            <img src='images/blog.png' className='section-img' alt='section' />
                         </div>
                     </div>
                 </div>

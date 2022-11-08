@@ -6,7 +6,8 @@ import '../static/css/SingleGame.css'
 import { listGameDetails } from '../actions/gameActions'
 
 
-function SingleGameScreen({ match }) {
+function SingleGameScreen({ match, history }) {
+
 
     const dispatch = useDispatch()
     const gameDetails = useSelector(state => state.gameDetails)
@@ -15,6 +16,10 @@ function SingleGameScreen({ match }) {
     useEffect(() => {
         dispatch(listGameDetails(match.params.id))
     }, [dispatch, match])
+
+    const addToCartHandler = () => {
+        history.push(`/cart/${match.params.id}`)
+    }
 
     return (
         <div className='single-game-message'>
@@ -35,7 +40,7 @@ function SingleGameScreen({ match }) {
                                 <p>Status: {game.count_in_stock > 0 ? 'In Stock' : 'Out of Stock'}</p>
                                 {game.count_in_stock > 0 && (
                                     <button className='buy-wrapper'>
-                                        <LinkRouter to='#' className='buy-link'>Buy</LinkRouter>
+                                        <LinkRouter onClick={addToCartHandler} className='buy-link'>Buy</LinkRouter>
                                     </button>
                                 )}
                             </div>

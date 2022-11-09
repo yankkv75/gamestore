@@ -21,7 +21,7 @@ function App() {
             <Route path='/post/:id' component={PostScreen} />
             <Route path='/games' component={GamesScreen} />
             <Route path='/game/:id' component={SingleGameScreen} />
-            <Route path='/cart/:id' component={CartScreen} />
+            <Route path='/cart/:id?' component={CartScreen} />
             <Footer />
         </Router>
     );

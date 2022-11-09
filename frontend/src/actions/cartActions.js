@@ -4,7 +4,7 @@ import { CART_ADD_GAME } from '../constants/cartConstants'
 // getState lets get any part of this state. I can get a single game, it allows to access this.
 // It's necessary when we're updating local storage and loading data into browser
 export const addToCart = (id, quantity) => async (dispatch, getState) => {
-    const { data } = await axios.get(`api/games/${id}`)
+    const { data } = await axios.get(`/api/game/${id}`)
 
     dispatch({
         type: CART_ADD_GAME,

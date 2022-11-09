@@ -19,11 +19,15 @@ const reducer = combineReducers({
     gameList: gameListReducer,
     gameDetails: gameDetailsReducer,
     cart: cartReducer,
-
-
 })
 
-const initalState = {}
+// Pull data from the local storage, parse it to turn back into a js object and load it into initial state
+const cartItemsLocalStorage = localStorage.getItem('cartItems') ?
+    JSON.parse(localStorage.getItem('cartItems')) : []
+
+const initalState = {
+    cart: { cartItems: cartItemsLocalStorage }
+}
 
 const middleware = [thunk]
 

@@ -39,7 +39,7 @@
 }
 
 .subtotal {
-    display: grid;  
+    display: grid;
 }
 
 .subtotal p {
@@ -74,8 +74,14 @@
     transform: scale(1.1);
 }
 
-@media screen and (max-width: 768px) {
+.remove-button {
+    background-color: transparent;
+    background: no-repeat;
+    border: none;
+}
 
+
+@media screen and (max-width: 768px) {
     .cart-container {
         height: 50vh;
     }

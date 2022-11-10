@@ -24,6 +24,12 @@ export const cartReducer = (state = { cartItems: [] }, action) => {
                 }
             }
 
+        case CART_REMOVE_GAME:
+            return {
+                ...state,
+                cartItems: state.cartItems.filter(x => x.game !== action.payload) // action.payload is going to be the id of the game, that need be to removed
+            }
+
         default:
             return state
     }

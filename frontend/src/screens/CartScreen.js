@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { Link as LinkRouter } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
-import { addToCart } from '../actions/cartActions'
+import { addToCart, removeCartItem } from '../actions/cartActions'
 
 import '../static/css/Cart.css'
 
@@ -14,13 +14,17 @@ function CartScreen({ match, history }) {
 
     const cart = useSelector(state => state.cart)
     const { cartItems } = cart
-    console.log('cartItems: ', cart)
 
     useEffect(() => {
         if (gameId) {
             dispatch(addToCart(gameId))
         }
     }, [dispatch, gameId])
+
+    const removeCartItemHandler = (id) => {
+        // console.log('remove: ', id)
+        dispatch(removeCartItem(id))
+    }
 
     return (
         <div className='cart'>
@@ -41,7 +45,9 @@ function CartScreen({ match, history }) {
                                     ${item.price}
                                 </td>
                                 <td className='item-delete'>
-                                    <i className="fa-solid fa-trash"></i>
+                                    <button className='remove-button' onClick={() => removeCartItemHandler(item.game)}>
+                                        <i className='fa-solid fa-trash fa-lg' />
+                                    </button>
                                 </td>
                             </tr>
                         </table>

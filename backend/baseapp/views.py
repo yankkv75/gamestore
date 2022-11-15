@@ -1,7 +1,8 @@
-from rest_framework.decorators import api_view
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 from rest_framework.response import Response
 
-from .models import Post, Game
+from .models import Post, Game, User
 from .serializers import GameSerializer, PostSerializer, UserSerializer, UserSerializerWithToken
 
 # Customizing jwt token
@@ -66,7 +67,16 @@ def get_posts(request):
 
 # gets the token
 @api_view(['GET'])
+@permission_classes([IsAuthenticated])
 def get_user(request):
     user = request.user
     serializer = UserSerializer(user, many=False)
+    return Response(serializer.data)
+
+# get all users info
+@api_view(['GET'])
+@permission_classes([IsAdminUser])
+def get_users(request):
+    users = User.objects.all()
+    serializer = UserSerializer(users, many=True)
     return Response(serializer.data)

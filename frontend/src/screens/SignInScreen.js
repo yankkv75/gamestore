@@ -17,7 +17,7 @@ function SignInScreen({ location, history }) {
 
     // if user logged in he shouldn't be able to see sign in sreen
     useEffect(() => {
-        if(userInfo){
+        if (userInfo) {
             history.push(redirect)
         }
     }, [history, userInfo, redirect])
@@ -70,7 +70,7 @@ function SignInScreen({ location, history }) {
                                 </div>
                                 <div className='form-field'>
                                     <p>
-                                        New to gamestore? <LinkRouter to={redirect ? `/sign-up?redirect=${redirect}`: '/sign-up' } className='sign-in-up-link'>Register</LinkRouter>
+                                        New to gamestore? <LinkRouter to={redirect ? `/sign-up?redirect=${redirect}` : '/sign-up'} className='sign-in-up-link'>Register</LinkRouter>
                                     </p>
                                 </div>
                             </form>

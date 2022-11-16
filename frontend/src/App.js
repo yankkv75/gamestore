@@ -11,7 +11,8 @@ import PostScreen from './screens/PostScreen'
 import GamesScreen from './screens/GamesScreen'
 import SingleGameScreen from './screens/SingleGameScreen'
 import CartScreen from './screens/CartScreen'
-import LoginScreen from './screens/LoginScreen'
+import SignInScreen from './screens/SignInScreen'
+import SignUpScreen from './screens/SignUpScreen'
 
 function App() {
     return (
@@ -23,7 +24,8 @@ function App() {
             <Route path='/games' component={GamesScreen} />
             <Route path='/game/:id' component={SingleGameScreen} />
             <Route path='/cart/:id?' component={CartScreen} />
-            <Route path='/sign-in' component={LoginScreen} />
+            <Route path='/sign-in' component={SignInScreen} />
+            <Route path='/sign-up' component={SignUpScreen} />
             <Footer />
         </Router>
     );

@@ -1,9 +1,9 @@
-.login-container {
+.sign-in-up-container {
     color: #000000;
     background-color: #f8f8f8;
 }
 
-.login-wrapper {
+.sign-in-up-wrapper {
     display: grid;
     z-index: 1;
     height: 550px;
@@ -15,7 +15,7 @@
     justify-content: center;
 }
 
-.login-row {
+.sign-in-up-row {
     display: grid;
     grid-auto-columns: minmax(auto, 1fr);
     align-items: center;
@@ -41,12 +41,12 @@
     color: #000000;
 }
 
-.btn-login-section {
+.btn-sign-in-up-section{
     background: none;
     border: none;
 }
 
-.btn-link-login {
+.btn-link-sign-in-up {
     offset: -80;
     border-radius: 50px;
     background-color: #000000;
@@ -60,7 +60,7 @@
     transition: transform 0.3s;
 }
 
-.btn-link-login:hover {
+.btn-link-sign-in-up:hover {
     background-color: #01bf71;
     transform: scale(1.1);
 }
@@ -78,23 +78,23 @@
     box-sizing: border-box;
 }
 
-.sign-up-link {
+.sign-in-up-link {
     color: #065c38;
     text-decoration: none;
 }
-.sign-up-link:hover {
+.sign-in-up-link:hover {
     color: #01bf71;
 }
 
 @media screen and (max-width: 760px) {
-    .login-container {
+    .sign-in-up-container {
         display: flex;
         justify-content: center;
         align-items: center;
-        height: 85vh;
+        height: 100vh;
     }
 
-    .login-row {
+    .sign-in-up-row {
         grid-template-areas: "col2 col2" "col1 col1";
     }
 
@@ -104,15 +104,11 @@
 }
 
 @media screen and (max-width: 480px) {
-    .login-row {
+    .sign-in-up-row {
         grid-template-areas: "col2 col2" "col1 col1";
     }
 
     .column-log2 {
         text-align: center;
-    }
-
-    .heading-login {
-        font-size: 32px;
     }
 }

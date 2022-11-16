@@ -1,21 +1,19 @@
 import React from 'react'
 import { Link, Link as LinkRouter } from 'react-router-dom'
 
-import '../static/css/Login.css'
-
-function LoginScreen() {
+function SignUpScreen() {
     return (
-        <div className='login-container'>
-            <div className='login-wrapper'>
-                <div className='login-row'>
+        <div className='sign-in-up-container'>
+            <div className='sign-in-up-wrapper'>
+                <div className='sign-in-up-row'>
                     <div className='column-log1'>
                         <div className='img-wrap-section'>
-                            <img src='images/login.png' className='section-img' alt='Login' />
+                            <img src='images/sign-up.png' className='section-img' alt='sign-up' />
                         </div>
                     </div>
                     <div className='column-log2'>
                         <div className='text-wrapper>'>
-                            <p className='top-line'>Login</p>
+                            <p className='top-line'>Sign Up</p>
 
                             <form>
                                 <div className='form-field'>
@@ -28,6 +26,14 @@ function LoginScreen() {
 
                                 <div className='form-field'>
                                     <input
+                                        type='text'
+                                        name='email'
+                                        placeholder='Email'
+                                    />
+                                </div>
+
+                                <div className='form-field'>
+                                    <input
                                         type='password'
                                         name='password'
                                         placeholder='Password'
@@ -35,13 +41,21 @@ function LoginScreen() {
                                 </div>
 
                                 <div className='form-field'>
-                                    <button className='btn-login-section'>
-                                        <LinkRouter to='#' className='btn-link-login'>Login</LinkRouter>
+                                    <input
+                                        type='password'
+                                        name='password'
+                                        placeholder='Confirm password'
+                                    />
+                                </div>
+
+                                <div className='form-field'>
+                                    <button className='btn-sign-in-up-section'>
+                                        <LinkRouter to='#' className='btn-link-sign-in-up'>Sign Up</LinkRouter>
                                     </button>
                                 </div>
                                 <div className='form-field'>
                                     <p>
-                                        New to gamestore? <LinkRouter to='/sign-up' className='sign-up-link'>Register</LinkRouter>
+                                        Already have an account? <LinkRouter to='/sign-in' className='sign-in-up-link'>Login</LinkRouter>
                                     </p>
                                 </div>
                             </form>
@@ -53,4 +67,4 @@ function LoginScreen() {
     )
 }
 
-export default LoginScreen
+export default SignUpScreen

@@ -11,6 +11,7 @@ import PostScreen from './screens/PostScreen'
 import GamesScreen from './screens/GamesScreen'
 import SingleGameScreen from './screens/SingleGameScreen'
 import CartScreen from './screens/CartScreen'
+import LoginScreen from './screens/LoginScreen'
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
             <Route path='/games' component={GamesScreen} />
             <Route path='/game/:id' component={SingleGameScreen} />
             <Route path='/cart/:id?' component={CartScreen} />
+            <Route path='/sign-in' component={LoginScreen} />
             <Footer />
         </Router>
     );

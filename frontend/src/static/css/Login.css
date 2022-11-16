@@ -1,0 +1,118 @@
+.login-container {
+    color: #000000;
+    background-color: #f8f8f8;
+}
+
+.login-wrapper {
+    display: grid;
+    z-index: 1;
+    height: 550px;
+    width: 100%;
+    max-width: 1080px;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0 24px;
+    justify-content: center;
+}
+
+.login-row {
+    display: grid;
+    grid-auto-columns: minmax(auto, 1fr);
+    align-items: center;
+    grid-template-areas: "col1 col2";
+}
+
+.column-log1 {
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col1;
+}
+.column-log2 {
+    margin-bottom: 15px;
+    padding: 0 15px;
+    grid-area: col2;
+}
+
+.heading-login {
+    margin-bottom: 24px;
+    font-size: 48px;
+    line-height: 1.1;
+    font-weight: 600;
+    color: #000000;
+}
+
+.btn-login-section {
+    background: none;
+    border: none;
+}
+
+.btn-link-login {
+    offset: -80;
+    border-radius: 50px;
+    background-color: #000000;
+    white-space: nowrap;
+    padding: 10px 22px;
+    color: #ffffff;
+    font-size: 16px;
+    outline: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.3s;
+}
+
+.btn-link-login:hover {
+    background-color: #01bf71;
+    transform: scale(1.1);
+}
+
+.form-field {
+    margin-top: 1rem;
+    border-radius: 10px;
+}
+
+.form-field input {
+    width: 50%;
+    border: 2px solid #0000008d;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.sign-up-link {
+    color: #065c38;
+    text-decoration: none;
+}
+.sign-up-link:hover {
+    color: #01bf71;
+}
+
+@media screen and (max-width: 760px) {
+    .login-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 85vh;
+    }
+
+    .login-row {
+        grid-template-areas: "col2 col2" "col1 col1";
+    }
+
+    .column-log2 {
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .login-row {
+        grid-template-areas: "col2 col2" "col1 col1";
+    }
+
+    .column-log2 {
+        text-align: center;
+    }
+
+    .heading-login {
+        font-size: 32px;
+    }
+}

@@ -13,8 +13,10 @@ import {
     cartReducer
 } from './reducers/cartReducers'
 import {
-    userLoginReducer
+    userLoginReducer,
+    userRegisterReducer
 } from './reducers/userReducers'
+
 
 const reducer = combineReducers({
     postList: postListReducer,
@@ -23,6 +25,7 @@ const reducer = combineReducers({
     gameDetails: gameDetailsReducer,
     cart: cartReducer,
     userLogin: userLoginReducer,
+    userRegister: userRegisterReducer,
 })
 
 // Pull data from the local storage, parse it to turn back into a js object and load it into initial state

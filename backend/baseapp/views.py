@@ -76,7 +76,25 @@ def get_user(request):
     return Response(serializer.data)
 
 
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])
+def update_user(request):
+    user = request.user
+    serializer = UserSerializerWithToken(
+        user, many=False)  # return back new token
+    data = request.data
+    user.username = data['username']
+    user.name = data['name']
+    user.email = data['email']
+    if data['password'] != '':
+        user.password = make_password(data['password'])
+
+    user.save()
+    return Response(serializer.data)
+
 # get all users info
+
+
 @api_view(['GET'])
 @permission_classes([IsAdminUser])
 def get_users(request):

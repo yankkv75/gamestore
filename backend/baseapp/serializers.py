@@ -49,6 +49,10 @@ class UserSerializerWithToken(UserSerializer):
         model = User
         fields = ['id', '_id', 'username',
                   'email', 'name', 'is_admin', 'token']
+    
+    def get_token(self, obj):
+        token = RefreshToken.for_user(obj)
+        return str(token.access_token)
 
 # When we're generating or serializing a user, we're going to take that user object
 # and we're going to return back another token with the initial response

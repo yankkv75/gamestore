@@ -11,5 +11,6 @@ urlpatterns = [
     path('games/', views.get_games, name='games'),
     path('game/<str:pk>/', views.get_game, name='game'),
     path('users/profile/', views.get_user, name='user'),
+    path('users/profile/update/', views.update_user, name='update-user'),
     path('users/register/', views.register_user, name='register'),
 ]
